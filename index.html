@@ -13,7 +13,11 @@
     <div class="form-group">
       <label>
         Suche nach <strong>Rechnungs-Nummer</strong>
-        <input type="text" name="query" aria-describedby="invoice-search" placeholder="dd.mm.yyyy/buyingStore/invoiceNumber" required>
+        <input type="text" name="query" aria-describedby="invoice-search"
+          placeholder="dd.mm.yyyy/buyingStore/invoiceNumber"
+          pattern="\d\d.\d\d.\d\d\d\d/[A-Z]\d\d-[A-Z]\d\d/\d{8}"
+          title="Rechnungsnummer mit dem Format dd.mm.yyyy/A44-B55/12345678"
+          required>
       </label>
 
       <p id="invoice-search" class="form-text text-muted">
@@ -38,11 +42,11 @@
     <div class="form-group">
       <label>
         Suche nach <strong>Artikel-Nummer</strong>
-        <input type="text" name="query" aria-describedby="article-id-search" placeholder="2310912389" required>
+        <input type="text" name="query" aria-describedby="article-id-search" placeholder="01234566789" pattern="\d{10}" title="10-stellige Artikel-ID" required>
       </label>
 
       <p id="article-id-search" class="form-text text-muted">
-        Sie können nach einem <strong>Artikel-ID</strong> suchen. Bitte geben Sie sowohl
+        Sie können nach einer <strong>Artikel-ID</strong> suchen.
       </p>
 
       <button type="submit" placeholder="Invoice Item ID" class="btn btn-primary btn-sm">Suche</button>
@@ -55,7 +59,7 @@
     <div class="form-group">
       <label>
         Suche nach <strong>Artikel-Code</strong>
-        <input type="text" name="query" aria-describedby="article-code-search" placeholder="EADN-fdsfdjks" required>
+        <input type="text" name="query" aria-describedby="article-code-search" placeholder="EAN-abcdef" pattern="EAN-\d{4,10}" title="EAN gefolgt von 4 bis 10 stelligem Code aus Zahlen (EAN-xxxx)" required>
       </label>
 
       <p id="article-code-search" class="form-text text-muted">
