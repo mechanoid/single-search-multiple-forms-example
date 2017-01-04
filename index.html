@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+</head>
+<body>
+  <div class="container jumbotron">
+    <h1>Rechnungs-Suche</h1>
+  </div>
+  <form action="/" class="container invoice-id-search" method="GET">
+    <div class="form-group">
+      <label>
+        Suche nach <strong>Rechnungs-Nummer</strong>
+        <input type="text" name="query" aria-describedby="invoice-search" placeholder="dd.mm.yyyy/buyingStore/invoiceNumber" required>
+      </label>
+
+      <p id="invoice-search" class="form-text text-muted">
+        Sie können nach der <strong>Rechnungs-Nummer</strong> suchen. Diesen finden Sie z.B. auf der Verpackung, siehe Anhang A.
+      </p>
+
+      <button type="submit" placeholder="Invoice Item ID" class="btn btn-primary btn-sm">Suche</button>
+    </div>
+  </form>
+
+  <hr>
+
+  <form action="/" class="container" method="GET">
+    <div class="form-group">
+      <label>
+        Suche nach <strong>Artikel-Nummer</strong>
+        <input type="text" name="query" aria-describedby="article-id-search" placeholder="2310912389" required>
+      </label>
+
+      <p id="article-id-search" class="form-text text-muted">
+        Sie können nach einem <strong>Artikel-ID</strong> suchen. Bitte geben Sie sowohl
+      </p>
+
+      <button type="submit" placeholder="Invoice Item ID" class="btn btn-primary btn-sm">Suche</button>
+    </div>
+  </form>
+
+  <hr>
+
+  <form action="/" class="container" method="GET">
+    <div class="form-group">
+      <label>
+        Suche nach <strong>Artikel-Code</strong>
+        <input type="text" name="query" aria-describedby="article-code-search" placeholder="EADN-fdsfdjks" required>
+      </label>
+
+      <p id="article-code-search" class="form-text text-muted">
+        Sie können nach einem <strong>Artikel-Code</strong> suchen. Diesen finden Sie z.B. auf der Verpackung, siehe Anhang B.
+      </p>
+
+      <button type="submit" placeholder="Invoice Item Code" class="btn btn-primary btn-sm">Suche</button>
+    </div>
+  </form>
+
+  <hr>
+
+  <form action="/" class="container" method="GET">
+    <div class="form-group">
+      <label>
+        Suche nach <strong>Gruppe</strong>
+        <input type="text" name="query" placeholder="paid/outstanding/etc." required>
+      </label>
+
+      <button type="submit" placeholder="Group Description" class="btn btn-primary btn-sm">Suche</button>
+    </div>
+  </form>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="/search.js" async="true"></script>
+</body>
+</html>
